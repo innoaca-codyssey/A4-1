@@ -55,6 +55,13 @@ class BowTests(unittest.TestCase):
         self.assertTrue(np.isfinite(scores).all())
         self.assertEqual(scores[0],0)
 
+    def test_search_methods_reject_nonpositive_result_count(self):
+        for cls in (SearchIndex, BM25):
+            index = cls(["good story", "bad acting"])
+            for count in (0, -1):
+                with self.assertRaises(ValueError):
+                    index.top("good", count)
+
     def test_no_identifying_string_and_negation_retained(self):
         text = sanitize(
             "John Smith user@example.test 010-0000-1001 is not a good movie."

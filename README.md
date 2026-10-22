@@ -37,13 +37,13 @@ python experiments.py benchmark
 python main.py --query "good acting interesting story" --topk 5
 ```
 
-main.py는 점수/ID/정제 어휘 스니펫을 출력합니다. --method raw/log/double/bm25로 바꿀 수 있습니다. search(query, records, topk=5)는 같은 내용의 튜플 목록을 반환합니다.
+main.py는 점수/ID/정제 어휘 스니펫을 출력합니다. topk는 양수이며 코사인/BM25 모두0 이하를 거절합니다. --method raw/log/double/bm25로 바꿀 수 있습니다. search(query, records, topk=5)는 같은 내용의 튜플 목록을 반환합니다.
 
 ## 검증과 실험
 
 ### 수치 검증
 
-손계산 TF/IDF/BM25, 영벡터, 미지어, 누수/역색인과 식별 문자열 제거의 8개 검사가 통과했습니다. [검산 원본](outputs/verification.json)의 TfidfVectorizer는 같은 tokenizer/vocabulary, lowercase=False/token_pattern=None을 사용했습니다.
+손계산 TF/IDF/BM25, 영벡터, 미지어, 누수/역색인과 식별 문자열 제거와 검색 개수 경계의 9개 검사가 통과했습니다. [검산 원본](outputs/verification.json)의 TfidfVectorizer는 같은 tokenizer/vocabulary, lowercase=False/token_pattern=None을 사용했습니다.
 
 | TF | smooth_idf | norm | 최대 절대 오차 |
 |---|---|---|---:|

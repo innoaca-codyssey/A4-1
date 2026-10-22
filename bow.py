@@ -144,6 +144,8 @@ class BM25:
         return score.sum(axis=1)
 
     def top(self, query, k=5):
+        if k <= 0:
+            raise ValueError("k는 양수여야 합니다")
         scores = self.scores(query)
         order = np.lexsort((np.arange(len(scores)), -scores))
         return [(int(i), float(scores[i])) for i in order[:k] if scores[i] > 0]
