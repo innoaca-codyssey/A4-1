@@ -1,0 +1,11 @@
+{
+  "source_sha256": "a41211ae685019137410268134db6a1a14428c89b671eb83056151a878539008",
+  "rows": 2000,
+  "positive": 1000,
+  "negative": 1000,
+  "dropped_zero_approved_words": 0,
+  "approved_vocabulary_size": 653,
+  "retained_word_fraction": 0.57641701071637,
+  "data_sha256": "a0af6578a066b935490bda79fa054b9855f32af1f44ca254d633f0ccdb2fe852",
+  "privacy_transform": "only reviewed generic words; other alphabetic words replaced by UNK, digits/contact syntax excluded"
+}
