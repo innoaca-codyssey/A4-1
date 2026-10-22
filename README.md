@@ -1,28 +1,28 @@
 # 지능형 문서 검색
 
-NumPy TF-IDF와 코사인 검색을 직접 구현하고 공개 영화 리뷰2,000개의 검색/분류 실험을 수행했습니다.
+NumPy TF-IDF와 코사인 검색을 직접 구현하고 공개 영화 리뷰 2,000개의 검색/분류 실험을 수행했습니다.
 
 ## 구현 요약
 
 ### 데이터와 전처리
 
-Bo Pang/Lillian Lee의 Sentiment Polarity Dataset2.0을 NLTK의 고정 revision으로 받았습니다. [배포 메타데이터](licenses/movie_reviews.xml)는 CC BY4.0이며 출처/해시는 [자료 목록](resources/sources.json)에 있습니다. 실제 긍정/부정 리뷰 각1,000개를 사용했습니다.
+Bo Pang/Lillian Lee의 Sentiment Polarity Dataset 2.0을 NLTK의 고정 revision으로 받았습니다. [배포 메타데이터](licenses/movie_reviews.xml)는 CC BY 4.0이며 출처/해시는 [자료 목록](resources/sources.json)에 있습니다. 실제 긍정/부정 리뷰 각 1,000개를 사용했습니다.
 
-검토한 일반 어휘658개만 입력 표현에 남기고 나머지 단어는 UNK로 가렸습니다. 숫자/연락처 형식은 제외하고 원문은 저장소에 포함하지 않았습니다. 실제 남은 단어 비율은57.69%입니다. UNK의 위치와 문장 경계는 유지해 규칙 분석에서 부정어 거리가 바뀌지 않게 했습니다. 이 제한으로 고유명사/전문 용어와 일부 의미도 함께 손실됩니다.
+검토한 일반 어휘 658개만 입력 표현에 남기고 나머지 단어는 UNK로 가렸습니다. 숫자/연락처 형식은 제외하고 원문은 저장소에 포함하지 않았습니다. 실제 남은 단어 비율은 57.69%입니다. UNK의 위치와 문장 경계는 유지해 규칙 분석에서 부정어 거리가 바뀌지 않게 했습니다. 이 제한으로 고유명사/전문 용어와 일부 의미도 함께 손실됩니다.
 
-소문자화하고 단어 내부 apostrophe/hyphen을 허용합니다. 벡터화는 구두점/UNK와 관사/대명사/일반 조동사를 제외하며 not/no/never와can't같은 부정 축약형은 보존합니다. movies→movie같은 명사 복수형만 통일하고, good/excellent의 강도 차이를 보존하려고 자동 동의어 통합은 하지 않았습니다.
+소문자화하고 단어 내부 apostrophe/hyphen을 허용합니다. 벡터화는 구두점/UNK와 관사/대명사/일반 조동사를 제외하며 not/no/never와 can't 같은 부정 축약형은 보존합니다. movies→movie 같은 명사 복수형만 통일하고, good/excellent의 강도 차이를 보존하려고 자동 동의어 통합은 하지 않았습니다.
 
 일반 감성 어휘는 [VADER](https://github.com/cjhutto/vaderSentiment)의 단어를 검토해 선택했고 [MIT 저작권](licenses/VADER-LICENSE.txt)을 보존했습니다. 해당 분석기는 호출하지 않습니다. 토큰화/TF-IDF/코사인은 직접 구현하고 Scikit-learn은 검산/분류에 사용합니다.
 
 ### 수식과 검색
 
-TF는raw=count,log=1+ln(count),double=0.5+0.5*count/max_count를 비교하며 빈 단어는0입니다. 기본 IDF는ln((N+1)/(DF+1))+1이고 TF*IDF를 문서의L2길이로 나눕니다. 쿼리도 같은 IDF로 변환해 두 L2벡터의 내적을 코사인으로 계산합니다. 미지어/영벡터는0으로 처리합니다.
+TF는 raw=count, log=1+ln(count), double=0.5+0.5*count/max_count를 비교하며 빈 단어는 0입니다. 기본 IDF는 ln((N+1)/(DF+1))+1이고 TF*IDF를 문서의 L2 길이로 나눕니다. 쿼리도 같은 IDF로 변환해 두 L2 벡터의 내적을 코사인으로 계산합니다. 미지어/영벡터는 0으로 처리합니다.
 
-BM25는k1=1.5,b=0.75,양의IDF=ln(1+(N-DF+0.5)/(DF+0.5))를 사용합니다. 문서 길이와 평균 길이는 같은 정제 토큰에서 계산합니다. 역색인은단어별 비제로 문서 ID/가중치를 저장해 쿼리 단어의 목록만 누적합니다.
+BM25는 k1=1.5, b=0.75, 양의 IDF=ln(1+(N-DF+0.5)/(DF+0.5))를 사용합니다. 문서 길이와 평균 길이는 같은 정제 토큰에서 계산합니다. 역색인은 단어별 비제로 문서 ID/가중치를 저장해 쿼리 단어의 목록만 누적합니다.
 
 ### 설치와 사용
 
-Python3.12.14/NumPy2.5.4/Scikit-learn1.9.1/Matplotlib3.11.2의 전용venv에서 실행했습니다.
+Python 3.12.14/NumPy 2.5.4/Scikit-learn 1.9.1/Matplotlib 3.11.2의 전용 venv에서 실행했습니다.
 
 ```bash
 python3.12 -m venv .venv
@@ -37,13 +37,13 @@ python experiments.py benchmark
 python main.py --query "good acting interesting story" --topk 5
 ```
 
-main.py는점수/ID/정제 어휘 스니펫을 출력합니다. --method raw/log/double/bm25로 바꿀 수 있습니다. search(query, records, topk=5)는같은 내용의 튜플 목록을 반환합니다.
+main.py는 점수/ID/정제 어휘 스니펫을 출력합니다. --method raw/log/double/bm25로 바꿀 수 있습니다. search(query, records, topk=5)는 같은 내용의 튜플 목록을 반환합니다.
 
 ## 검증과 실험
 
 ### 수치 검증
 
-손계산 TF/IDF/BM25,영벡터,미지어,누수/역색인과식별문자열제거의8개 검사가 통과했습니다. [검산 원본](outputs/verification.json)의 TfidfVectorizer는 같은tokenizer/vocabulary,lowercase=False/token_pattern=None을 사용했습니다.
+손계산 TF/IDF/BM25, 영벡터, 미지어, 누수/역색인과 식별 문자열 제거의 8개 검사가 통과했습니다. [검산 원본](outputs/verification.json)의 TfidfVectorizer는 같은 tokenizer/vocabulary, lowercase=False/token_pattern=None을 사용했습니다.
 
 | TF | smooth_idf | norm | 최대 절대 오차 |
 |---|---|---|---:|
@@ -56,11 +56,11 @@ main.py는점수/ID/정제 어휘 스니펫을 출력합니다. --method raw/log
 | log | False | None | 0.000e+00 |
 | log | False | l2 | 1.665e-16 |
 
-2,000x549 행렬의8설정 모두1e-6 이내였습니다. 이 검산에서 학습한 IDF는 분류 실험에 재사용하지 않습니다.
+2,000x549 행렬의 8설정 모두 1e-6 이내였습니다. 이 검산에서 학습한 IDF는 분류 실험에 재사용하지 않습니다.
 
 ### 고정 분할의 분류와 TF 비교
 
-층화8:2/random_state42의 Train1,600/Test400을 고정했습니다. TF/IDF는 각 Train에서만 fit하고 LogisticRegression C1/max_iter2000을 사용했습니다. 기본log TF는 비교 전에 정했으며 Test성능으로 선택하지 않았습니다. Train어휘는547개로 전체 검색용549개와 구분됩니다.
+층화 8:2/random_state=42의 Train 1,600개/Test 400개를 고정했습니다. TF/IDF는 각 Train에서만 fit하고 LogisticRegression C=1/max_iter=2000을 사용했습니다. 기본 log TF는 비교 전에 정했으며 Test 성능으로 선택하지 않았습니다. Train 어휘는 547개로 전체 검색용 549개와 구분됩니다.
 
 | TF | Accuracy | F1 |
 |---|---:|---:|
@@ -70,7 +70,7 @@ main.py는점수/ID/정제 어휘 스니펫을 출력합니다. --method raw/log
 
 ![혼동행렬](outputs/confusion.png)
 
-Log TF는반복되는 단어의 영향을 완화했고 이 분할에서 F1이 가장 높았습니다. Double TF가 항상 나은 것은 아니며0.5의기본값이 희귀 단어의 상대 가중치를 높이는 효과도 있습니다.
+Log TF는 반복되는 단어의 영향을 완화했고 이 분할에서 F1이 가장 높았습니다. Double TF가 항상 나은 것은 아니며 0.5의 기본값이 희귀 단어의 상대 가중치를 높이는 효과도 있습니다.
 
 ### 검색과 BM25
 
@@ -82,9 +82,9 @@ Log TF는반복되는 단어의 영향을 완화했고 이 분할에서 F1이 �
 0.261022	review-1931	like great musical work few movies style why good film almost too many story feels through into young feels but same time brilliance through through acting acting emotion through p
 ```
 
-세 쿼리에서 top5의log TF 대비 Jaccard를 비교했습니다. 이는순위 구성의 변화이며 사람의 의미 관련성 정답을 측정한 지표가 아닙니다.
+세 쿼리에서 top5의 log TF 대비 Jaccard를 비교했습니다. 이는 순위 구성의 변화이며 사람의 의미 관련성 정답을 측정한 지표가 아닙니다.
 
-| 방법 | 쿼리 | log TF와top5 Jaccard |
+| 방법 | 쿼리 | log TF와 top5 Jaccard |
 |---|---|---:|
 | raw | good acting interesting story | 0.429 |
 | raw | bad boring predictable plot | 0.111 |
@@ -99,28 +99,28 @@ Log TF는반복되는 단어의 영향을 완화했고 이 분할에서 F1이 �
 | BM25 | bad boring predictable plot | 0.111 |
 | BM25 | beautiful visual effect music | 0.667 |
 
-BM25는문서 길이 보정과TF포화로 순위가 달라졌습니다. [점수/ID/스니펫 원본](outputs/search.json)에 같은 쿼리의결과를 보존했습니다. BM25점수와코사인 점수는 다른 척도이므로 숫자 크기를 직접 비교하지 않습니다.
+BM25는 문서 길이 보정과 TF 포화로 순위가 달라졌습니다. [점수/ID/스니펫 원본](outputs/search.json)에 같은 쿼리의 결과를 보존했습니다. BM25 점수와 코사인 점수는 다른 척도이므로 숫자 크기를 직접 비교하지 않습니다.
 
 ### 역색인 시간
 
-2,000문서/549어휘/127,454비제로 값에서20쿼리,5개 배치/배치당200회를 측정했습니다. 전체 스캔은 이미 정규화한 행렬과의내적을 사용하며 불필요한재정규화를 넣지 않았습니다.
+2,000문서/549어휘/127,454비제로 값에서 20쿼리, 5개 배치/배치당 200회를 측정했습니다. 전체 스캔은 이미 정규화한 행렬과의 내적을 사용했습니다.
 
-전 스캔 중앙값은쿼리당31.319마이크로초, 역색인은14.167마이크로초로이 실행에서2.21배였습니다. 최대 점수 차이는5.551e-17였습니다.
+전 스캔 중앙값은 쿼리당 31.319마이크로초, 역색인은 14.167마이크로초로 이 실행에서 2.21배였습니다. 최대 점수 차이는 5.551e-17이었습니다.
 
-전 스캔은 O(NV),역색인은쿼리 벡터 변환O(V)와쿼리 단어의posting 길이 합에 비례합니다. 목록 생성 비용은 별도이며 비교를 위해 이 구현은 밀집행렬도 함께 보관합니다. 흔한 단어는 긴목록을 가져야 하므로 작은 데이터/다른 쿼리에서 같은속도비를 보장하지 않습니다.
+전 스캔은 O(NV), 역색인은 쿼리 벡터 변환 O(V)와 쿼리 단어의 posting 길이 합에 비례합니다. 목록 생성 비용은 별도이며 비교를 위해 이 구현은 밀집행렬도 함께 보관합니다. 흔한 단어는 긴 목록을 가져야 하므로 작은 데이터/다른 쿼리에서 같은 속도비를 보장하지 않습니다.
 
 ## 한계와 개선
 
-Log TF의실제오분류10건을 저장했고 그중5건의 단어 기여를 확인했습니다.
+Log TF의 실제 오분류 10건을 저장했고 그중 5건의 단어 기여를 확인했습니다.
 
 | 문서 | 실제/예측 | 확인한 원인 |
 |---|---|---|
-| review-0466 | 부정/긍정 | enjoy/theme/well의양의가중치가크며평가주체나문장범위를구분하지못함 |
-| review-1028 | 긍정/부정 | bad/no/worse같은표현이solid/great등과섞인복합평가에서부정증거가우세 |
-| review-1841 | 긍정/부정 | fun/loved와no/isn't가공존하며부정범위/역접의순서를잃음 |
-| review-1201 | 긍정/부정 | pathetic/ugly인물묘사가interesting이라는작품평가와혼동됨 |
-| review-1917 | 긍정/부정 | minute/looks같은비감성단어도훈련상관때문에음의기여를보임 |
+| review-0466 | 부정/긍정 | enjoy/theme/well의 양의 가중치가 크며 평가 주체나 문장 범위를 구분하지 못함 |
+| review-1028 | 긍정/부정 | bad/no/worse 같은 표현이 solid/great 등과 섞인 복합 평가에서 부정 증거가 우세 |
+| review-1841 | 긍정/부정 | fun/loved와 no/isn't가 공존하며 부정 범위/역접의 순서를 잃음 |
+| review-1201 | 긍정/부정 | pathetic/ugly 인물 묘사가 interesting이라는 작품 평가와 혼동됨 |
+| review-1917 | 긍정/부정 | minute/looks 같은 비감성 단어도 훈련 상관 때문에 음의 기여를 보임 |
 
-[실제 오분류/기여값](outputs/classification.json)에문서 ID와정제스니펫을연결했습니다. 단어 빈도는 누가 무엇을 평가했는지나 not good/good의 구성적 의미를 표현하지 못합니다. 첫 검색 결과에도 good/acting이 있으면서 boring을 말하는 부정 리뷰가 올라왔습니다.
+[실제 오분류/기여값](outputs/classification.json)에 문서 ID와 정제 스니펫을 연결했습니다. 단어 빈도는 누가 무엇을 평가했는지나 not good/good의 구성적 의미를 표현하지 못합니다. 첫 검색 결과에도 good/acting이 있으면서 boring을 말하는 부정 리뷰가 올라왔습니다.
 
 어휘 제한으로 고유명사/전문 표현과 그 주변 의미가 손실됐으며, 정제 스니펫은 원문 인용이 아닙니다. 후속 개선으로 구/부정 범위를 표현하는 n-gram과 문맥 표현을 비교할 수 있지만 이 실험에서 실행한 결과는 아닙니다. 새로운 표현을 학습하려면 Train에서만 어휘와 모델을 정하고 고정 Test로 확인해야 합니다.
