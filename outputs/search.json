@@ -1,0 +1,446 @@
+[
+  {
+    "method": "raw",
+    "query": "good acting interesting story",
+    "hits": [
+      {
+        "score": 0.41718019140615115,
+        "id": "review-0604",
+        "label": 0,
+        "snippet": "up old much movie quite boring very story well quite acting very good character development quite interesting but story not enough into movie few things about story didn't very wel"
+      },
+      {
+        "score": 0.3952230970607853,
+        "id": "review-1253",
+        "label": 1,
+        "snippet": "good movies film good story fresh film under good script just but acting over role over like rich character good else good but man doesn't up story but whose doesn't make like"
+      },
+      {
+        "score": 0.3274133160168164,
+        "id": "review-1576",
+        "label": 1,
+        "snippet": "most almost well so natural make movie out done before version story original same time story but thing seems version story no even after story interesting love story much part jus"
+      },
+      {
+        "score": 0.3196762723552177,
+        "id": "review-1900",
+        "label": 1,
+        "snippet": "most not start part enough like makes time romance movie about great many even not other movie shows maybe not but still shows very story story interesting story although most prem"
+      },
+      {
+        "score": 0.3083626454931102,
+        "id": "review-1358",
+        "label": 1,
+        "snippet": "title not another story time movies film film love story work story but seems before just not like well still excellent story title out after out over off having between having man"
+      }
+    ],
+    "top5_jaccard_with_log": 0.42857142857142855
+  },
+  {
+    "method": "raw",
+    "query": "bad boring predictable plot",
+    "hits": [
+      {
+        "score": 0.39951457030388327,
+        "id": "review-0371",
+        "label": 0,
+        "snippet": "film but great film boring plot old minute films bored through saw minutes long thought maybe poor film just out however not out but film minutes show off very original old about m"
+      },
+      {
+        "score": 0.3604274399985532,
+        "id": "review-0086",
+        "label": 0,
+        "snippet": "wise start episode episode boring empty nice effects after long time opening film opening movie plot off however not seems many more evil failure script characters script make bori"
+      },
+      {
+        "score": 0.34586739103959074,
+        "id": "review-0364",
+        "label": 0,
+        "snippet": "bad film about off can't see experience so bad film most incompetent films but makes disaster enjoyed most time despite dreadful acting story don't not off unacceptable so if up wo"
+      },
+      {
+        "score": 0.3309355985542993,
+        "id": "review-0812",
+        "label": 0,
+        "snippet": "plot into bad after very against before into boring no suspense bad dialogue bad acting hilarious ending too bad because premise film interesting but friends movie out just bad fil"
+      },
+      {
+        "score": 0.31186501841990505,
+        "id": "review-0661",
+        "label": 0,
+        "snippet": "even movie saw yet still watch never original not so part excited see almost old good time bad science plot thing movie so boring saw so bad good so but through plot wasn't script "
+      }
+    ],
+    "top5_jaccard_with_log": 0.1111111111111111
+  },
+  {
+    "method": "raw",
+    "query": "beautiful visual effect music",
+    "hits": [
+      {
+        "score": 0.4315534715233894,
+        "id": "review-1542",
+        "label": 1,
+        "snippet": "don't review fool into movie short love but see see beautiful even short ugly looking man obnoxious beautiful even haven't much out beautiful woman beautiful but still beautiful bu"
+      },
+      {
+        "score": 0.3698517135013797,
+        "id": "review-1410",
+        "label": 1,
+        "snippet": "after isn't so neither family while but out other ridiculous action character while film see much more effect great film many cast animated so fascinating watch performances withou"
+      },
+      {
+        "score": 0.32723942251148574,
+        "id": "review-1710",
+        "label": 1,
+        "snippet": "film film minutes heroine minutes time but director best episodes effects even if made experience like film through exciting movies visual style no camera work cinematography brill"
+      },
+      {
+        "score": 0.322412214979785,
+        "id": "review-1352",
+        "label": 1,
+        "snippet": "director film action effects action science fiction just don't better story beautiful second best fake while people after out really why people plot through great action effects af"
+      },
+      {
+        "score": 0.3190017185020595,
+        "id": "review-0811",
+        "label": 0,
+        "snippet": "about effects very horror film effects while visual effects don't think failure people failed into original about so effects not if story isn't aren't end up very frightening movie"
+      }
+    ],
+    "top5_jaccard_with_log": 0.42857142857142855
+  },
+  {
+    "method": "log",
+    "query": "good acting interesting story",
+    "hits": [
+      {
+        "score": 0.37108677196956563,
+        "id": "review-0604",
+        "label": 0,
+        "snippet": "up old much movie quite boring very story well quite acting very good character development quite interesting but story not enough into movie few things about story didn't very wel"
+      },
+      {
+        "score": 0.33875968485404495,
+        "id": "review-1253",
+        "label": 1,
+        "snippet": "good movies film good story fresh film under good script just but acting over role over like rich character good else good but man doesn't up story but whose doesn't make like"
+      },
+      {
+        "score": 0.2946481898796175,
+        "id": "review-1900",
+        "label": 1,
+        "snippet": "most not start part enough like makes time romance movie about great many even not other movie shows maybe not but still shows very story story interesting story although most prem"
+      },
+      {
+        "score": 0.2759563095829959,
+        "id": "review-0783",
+        "label": 0,
+        "snippet": "isn't much good about movie not much about acting directing make seeing movie so good out didn't about movie down end plot interesting but while ridiculous things into fascinating "
+      },
+      {
+        "score": 0.2610217986073423,
+        "id": "review-1931",
+        "label": 1,
+        "snippet": "like great musical work few movies style why good film almost too many story feels through into young feels but same time brilliance through through acting acting emotion through p"
+      }
+    ],
+    "top5_jaccard_with_log": 1.0
+  },
+  {
+    "method": "log",
+    "query": "bad boring predictable plot",
+    "hits": [
+      {
+        "score": 0.3132639166833714,
+        "id": "review-0371",
+        "label": 0,
+        "snippet": "film but great film boring plot old minute films bored through saw minutes long thought maybe poor film just out however not out but film minutes show off very original old about m"
+      },
+      {
+        "score": 0.3032730725147957,
+        "id": "review-0222",
+        "label": 0,
+        "snippet": "young not during movie boring not boring still action film despite enough film fiction end action sequences so script feel seems original so movie suspense hours between scenes muc"
+      },
+      {
+        "score": 0.3022926922994202,
+        "id": "review-0224",
+        "label": 0,
+        "snippet": "plot director film after without film if not really can't time movie so many comedy film pathetic jokes plot boring bad film annoying acting bad can't seem ending movie clever humo"
+      },
+      {
+        "score": 0.29814056635692227,
+        "id": "review-0352",
+        "label": 0,
+        "snippet": "if like thrilling horror film time but seems boring original mystery science theater bad films but good too time actor evil seems so beginning into but well about hour film until o"
+      },
+      {
+        "score": 0.289590952893858,
+        "id": "review-0129",
+        "label": 0,
+        "snippet": "plot show movie people before make other whose if didn't watch show quite entertaining despite having show outrageous funny film no comedy drama plot stupid never thought boring sa"
+      }
+    ],
+    "top5_jaccard_with_log": 1.0
+  },
+  {
+    "method": "log",
+    "query": "beautiful visual effect music",
+    "hits": [
+      {
+        "score": 0.32562058059213095,
+        "id": "review-1352",
+        "label": 1,
+        "snippet": "director film action effects action science fiction just don't better story beautiful second best fake while people after out really why people plot through great action effects af"
+      },
+      {
+        "score": 0.31876261991512306,
+        "id": "review-1410",
+        "label": 1,
+        "snippet": "after isn't so neither family while but out other ridiculous action character while film see much more effect great film many cast animated so fascinating watch performances withou"
+      },
+      {
+        "score": 0.3045658044703425,
+        "id": "review-1459",
+        "label": 1,
+        "snippet": "movies but again horror films really long after movie horror films much visual effects so much so rather really no movie long time if over film person stupid enough so up having be"
+      },
+      {
+        "score": 0.27586626975697304,
+        "id": "review-1782",
+        "label": 1,
+        "snippet": "most film time out drama about most disaster time director visual sound effects frightening atmosphere liked very much emotional brutal between while up happily ever after down few"
+      },
+      {
+        "score": 0.26911811406028885,
+        "id": "review-1542",
+        "label": 1,
+        "snippet": "don't review fool into movie short love but see see beautiful even short ugly looking man obnoxious beautiful even haven't much out beautiful woman beautiful but still beautiful bu"
+      }
+    ],
+    "top5_jaccard_with_log": 1.0
+  },
+  {
+    "method": "double",
+    "query": "good acting interesting story",
+    "hits": [
+      {
+        "score": 0.29771380961278127,
+        "id": "review-1253",
+        "label": 1,
+        "snippet": "good movies film good story fresh film under good script just but acting over role over like rich character good else good but man doesn't up story but whose doesn't make like"
+      },
+      {
+        "score": 0.2607027742021768,
+        "id": "review-0604",
+        "label": 0,
+        "snippet": "up old much movie quite boring very story well quite acting very good character development quite interesting but story not enough into movie few things about story didn't very wel"
+      },
+      {
+        "score": 0.2532131737977341,
+        "id": "review-0764",
+        "label": 0,
+        "snippet": "beginning during film story series but most not movie best so no no actors screenplay rather much story movie over series wasn't after just but not even man audience series story t"
+      },
+      {
+        "score": 0.25039797606869585,
+        "id": "review-1931",
+        "label": 1,
+        "snippet": "like great musical work few movies style why good film almost too many story feels through into young feels but same time brilliance through through acting acting emotion through p"
+      },
+      {
+        "score": 0.24384941625257084,
+        "id": "review-0546",
+        "label": 0,
+        "snippet": "best friend character comedy plot actor after film movie not make once perhaps because watched perhaps perhaps because most same perhaps perhaps because movie just wasn't funny was"
+      }
+    ],
+    "top5_jaccard_with_log": 0.42857142857142855
+  },
+  {
+    "method": "double",
+    "query": "bad boring predictable plot",
+    "hits": [
+      {
+        "score": 0.28066227372774805,
+        "id": "review-0068",
+        "label": 0,
+        "snippet": "time until second look comedy again but even up so before too bad sound like movie see without best thing about never better role look but plot so movie same but like without witho"
+      },
+      {
+        "score": 0.2582791069689568,
+        "id": "review-0661",
+        "label": 0,
+        "snippet": "even movie saw yet still watch never original not so part excited see almost old good time bad science plot thing movie so boring saw so bad good so but through plot wasn't script "
+      },
+      {
+        "score": 0.2547777503553895,
+        "id": "review-0184",
+        "label": 0,
+        "snippet": "bad audience film out end film about up dreadful ugliness stupid boring love between dumb best indeed over again making original worst time original made more up made well about ti"
+      },
+      {
+        "score": 0.25320732055645334,
+        "id": "review-0121",
+        "label": 0,
+        "snippet": "plot despite interesting premise movie because boring worst acting performances romance many jokes long ending out comedy if comedy don't out very bad things perfect worthy barely "
+      },
+      {
+        "score": 0.25001951396286853,
+        "id": "review-0397",
+        "label": 0,
+        "snippet": "end action scene into scene because production made lousy movie like action sequence boring action sequence boring end film scenes even scene but so can't even audience no characte"
+      }
+    ],
+    "top5_jaccard_with_log": 0.0
+  },
+  {
+    "method": "double",
+    "query": "beautiful visual effect music",
+    "hits": [
+      {
+        "score": 0.3468233023398395,
+        "id": "review-1352",
+        "label": 1,
+        "snippet": "director film action effects action science fiction just don't better story beautiful second best fake while people after out really why people plot through great action effects af"
+      },
+      {
+        "score": 0.2912004404026203,
+        "id": "review-1459",
+        "label": 1,
+        "snippet": "movies but again horror films really long after movie horror films much visual effects so much so rather really no movie long time if over film person stupid enough so up having be"
+      },
+      {
+        "score": 0.26130973648585587,
+        "id": "review-1556",
+        "label": 1,
+        "snippet": "because like like however works extremely bad same although films effects brilliant another almost work other young like great creative even whose but many things young very movie "
+      },
+      {
+        "score": 0.24339824572384638,
+        "id": "review-1410",
+        "label": 1,
+        "snippet": "after isn't so neither family while but out other ridiculous action character while film see much more effect great film many cast animated so fascinating watch performances withou"
+      },
+      {
+        "score": 0.24165457300138013,
+        "id": "review-0801",
+        "label": 0,
+        "snippet": "other rather beginning thriller during up during still hardly until end film but interesting original plot instead another tension between beautiful female impressive visual atmosp"
+      }
+    ],
+    "top5_jaccard_with_log": 0.42857142857142855
+  },
+  {
+    "method": "BM25",
+    "query": "good acting interesting story",
+    "hits": [
+      {
+        "score": 6.885397671331669,
+        "id": "review-0604",
+        "label": 0,
+        "snippet": "up old much movie quite boring very story well quite acting very good character development quite interesting but story not enough into movie few things about story didn't very wel"
+      },
+      {
+        "score": 6.221653112717323,
+        "id": "review-1900",
+        "label": 1,
+        "snippet": "most not start part enough like makes time romance movie about great many even not other movie shows maybe not but still shows very story story interesting story although most prem"
+      },
+      {
+        "score": 5.700919405098438,
+        "id": "review-0494",
+        "label": 0,
+        "snippet": "never really films like old man while watching couldn't but film themes movies even just isn't very good film silly didn't hate hate film most acting quite good but admiration acto"
+      },
+      {
+        "score": 5.6198977811157835,
+        "id": "review-1931",
+        "label": 1,
+        "snippet": "like great musical work few movies style why good film almost too many story feels through into young feels but same time brilliance through through acting acting emotion through p"
+      },
+      {
+        "score": 5.370416227042572,
+        "id": "review-1007",
+        "label": 1,
+        "snippet": "see shocked liked film hasn't made film but film while making vibrant few into humor characters film but interesting screen looks but looks more like make worse performance screen "
+      }
+    ],
+    "top5_jaccard_with_log": 0.42857142857142855
+  },
+  {
+    "method": "BM25",
+    "query": "bad boring predictable plot",
+    "hits": [
+      {
+        "score": 6.461698533660686,
+        "id": "review-0086",
+        "label": 0,
+        "snippet": "wise start episode episode boring empty nice effects after long time opening film opening movie plot off however not seems many more evil failure script characters script make bori"
+      },
+      {
+        "score": 6.2513561207913675,
+        "id": "review-0224",
+        "label": 0,
+        "snippet": "plot director film after without film if not really can't time movie so many comedy film pathetic jokes plot boring bad film annoying acting bad can't seem ending movie clever humo"
+      },
+      {
+        "score": 5.9869273233228615,
+        "id": "review-0364",
+        "label": 0,
+        "snippet": "bad film about off can't see experience so bad film most incompetent films but makes disaster enjoyed most time despite dreadful acting story don't not off unacceptable so if up wo"
+      },
+      {
+        "score": 5.803653599692713,
+        "id": "review-0184",
+        "label": 0,
+        "snippet": "bad audience film out end film about up dreadful ugliness stupid boring love between dumb best indeed over again making original worst time original made more up made well about ti"
+      },
+      {
+        "score": 5.786885130032644,
+        "id": "review-0009",
+        "label": 0,
+        "snippet": "plot young boy before evil man man old well bad movie see start story just boring not original acting well actor version but less think about just off not bad but miscast bad awful"
+      }
+    ],
+    "top5_jaccard_with_log": 0.1111111111111111
+  },
+  {
+    "method": "BM25",
+    "query": "beautiful visual effect music",
+    "hits": [
+      {
+        "score": 10.801004316154707,
+        "id": "review-1352",
+        "label": 1,
+        "snippet": "director film action effects action science fiction just don't better story beautiful second best fake while people after out really why people plot through great action effects af"
+      },
+      {
+        "score": 9.415157531142098,
+        "id": "review-1410",
+        "label": 1,
+        "snippet": "after isn't so neither family while but out other ridiculous action character while film see much more effect great film many cast animated so fascinating watch performances withou"
+      },
+      {
+        "score": 9.338297888137177,
+        "id": "review-1782",
+        "label": 1,
+        "snippet": "most film time out drama about most disaster time director visual sound effects frightening atmosphere liked very much emotional brutal between while up happily ever after down few"
+      },
+      {
+        "score": 8.359755870135347,
+        "id": "review-1459",
+        "label": 1,
+        "snippet": "movies but again horror films really long after movie horror films much visual effects so much so rather really no movie long time if over film person stupid enough so up having be"
+      },
+      {
+        "score": 8.209207765373204,
+        "id": "review-1988",
+        "label": 1,
+        "snippet": "more see but isn't triumphant done again film screen so much watched original episodes compelling about not story but amazing visuals plot between young out animated down young boy"
+      }
+    ],
+    "top5_jaccard_with_log": 0.6666666666666666
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "documents": 2000,
+  "vocabulary": 549,
+  "nonzero_entries": 127454,
+  "queries": 20,
+  "batches": 5,
+  "calls_per_batch": 200,
+  "maximum_score_error": 5.551115123125783e-17,
+  "measurements": {
+    "dense_scan": {
+      "seconds_per_query_batches": [
+        3.1707290036138145e-05,
+        3.1283749849535524e-05,
+        3.119416505796835e-05,
+        3.135562496026978e-05,
+        3.131916513666511e-05
+      ],
+      "median_seconds": 3.131916513666511e-05
+    },
+    "inverted": {
+      "seconds_per_query_batches": [
+        1.5294790209736675e-05,
+        1.416687504388392e-05,
+        1.3817915169056505e-05,
+        1.3851460244040936e-05,
+        1.4187085034791381e-05
+      ],
+      "median_seconds": 1.416687504388392e-05
+    }
+  },
+  "speed_ratio_dense_over_inverted": 2.2107320802681976
+}

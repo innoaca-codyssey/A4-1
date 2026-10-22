@@ -50,4 +50,4 @@ def tokenize(text):
 
 def preview(text, limit=180):
     """가린 단어를 제외하고 남은 실제 어휘로 짧게 표시한다."""
-    return " ".join(t for t in sequence(text) if t in APPROVED)[:limit]
+    return " ".join(t for t in sequence(text) if t in APPROVED and t not in STOP)[:limit].rstrip()

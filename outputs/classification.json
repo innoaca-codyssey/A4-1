@@ -1,0 +1,572 @@
+{
+  "primary_tf": "log chosen before comparison",
+  "split": "stratified80/20 random_state42",
+  "classification": [
+    {
+      "tf": "raw",
+      "train_rows": 1600,
+      "test_rows": 400,
+      "vocabulary": 547,
+      "accuracy": 0.815,
+      "f1": 0.8131313131313131,
+      "confusion_matrix": [
+        [
+          165,
+          35
+        ],
+        [
+          39,
+          161
+        ]
+      ]
+    },
+    {
+      "tf": "log",
+      "train_rows": 1600,
+      "test_rows": 400,
+      "vocabulary": 547,
+      "accuracy": 0.8275,
+      "f1": 0.8304668304668305,
+      "confusion_matrix": [
+        [
+          162,
+          38
+        ],
+        [
+          31,
+          169
+        ]
+      ]
+    },
+    {
+      "tf": "double",
+      "train_rows": 1600,
+      "test_rows": 400,
+      "vocabulary": 547,
+      "accuracy": 0.8125,
+      "f1": 0.8148148148148148,
+      "confusion_matrix": [
+        [
+          160,
+          40
+        ],
+        [
+          35,
+          165
+        ]
+      ]
+    }
+  ],
+  "misclassified_primary": [
+    {
+      "id": "review-0466",
+      "row": 466,
+      "true": 0,
+      "predicted": 1,
+      "snippet": "time movie rather opening sequence rather things story audience into very but enjoy experience during off more else if but into if still after between within more even so film not even successful version even so poor while most films theme film plot sequences no more film seem else actors film acting barely film out worked really seems well production film opening sequence quite good too another however people enjoy seeing friends over film not film still",
+      "positive_terms": [
+        [
+          "enjoy",
+          0.35150632831191037
+        ],
+        [
+          "theme",
+          0.15156826174871665
+        ],
+        [
+          "well",
+          0.14396090372748244
+        ],
+        [
+          "still",
+          0.14052855583298438
+        ],
+        [
+          "quite",
+          0.1356089694111586
+        ]
+      ],
+      "negative_terms": [
+        [
+          "poor",
+          -0.23111951293991156
+        ],
+        [
+          "else",
+          -0.22723000768261173
+        ],
+        [
+          "plot",
+          -0.16792994908735429
+        ],
+        [
+          "even",
+          -0.1351385032148846
+        ],
+        [
+          "no",
+          -0.10538997807363487
+        ]
+      ]
+    },
+    {
+      "id": "review-1028",
+      "row": 1028,
+      "true": 1,
+      "predicted": 0,
+      "snippet": "perhaps film even most horror out made but not much after into great like movie out no people after through movie leading into among book film young beautiful no because into about experience very under things start up after while time horrible not see between thing documentary director film opening scenes documentary film more because instead film makes but movie story never very more more people worked fail horror suspense original not more quality more opening scenes camera over musical title",
+      "positive_terms": [
+        [
+          "very",
+          0.19440565835260137
+        ],
+        [
+          "most",
+          0.15107049970049144
+        ],
+        [
+          "solid",
+          0.13860427748216653
+        ],
+        [
+          "great",
+          0.1362754080082336
+        ],
+        [
+          "experience",
+          0.12913973885339985
+        ]
+      ],
+      "negative_terms": [
+        [
+          "bad",
+          -0.34381875355962516
+        ],
+        [
+          "no",
+          -0.18123617143764573
+        ],
+        [
+          "worse",
+          -0.13673156681857024
+        ],
+        [
+          "doesn't",
+          -0.10961812074672438
+        ],
+        [
+          "empty",
+          -0.1037474918914538
+        ]
+      ]
+    },
+    {
+      "id": "review-1841",
+      "row": 1841,
+      "true": 1,
+      "predicted": 0,
+      "snippet": "movie very no director no man woman loved film so story version if isn't much emotional having too much fun but comedy films fun",
+      "positive_terms": [
+        [
+          "fun",
+          0.6347992792214628
+        ],
+        [
+          "loved",
+          0.3249722234307723
+        ],
+        [
+          "very",
+          0.2498088373064656
+        ],
+        [
+          "emotional",
+          0.09007435081230769
+        ],
+        [
+          "film",
+          0.08552478127552063
+        ]
+      ],
+      "negative_terms": [
+        [
+          "no",
+          -0.33704237378365914
+        ],
+        [
+          "isn't",
+          -0.23838341494664228
+        ],
+        [
+          "comedy",
+          -0.18728876775124453
+        ],
+        [
+          "director",
+          -0.168332711701242
+        ],
+        [
+          "much",
+          -0.13451110652523057
+        ]
+      ]
+    },
+    {
+      "id": "review-1201",
+      "row": 1201,
+      "true": 1,
+      "predicted": 0,
+      "snippet": "film no screen like director but movie delightful boy bored shots up through dumb desperate not part if characters pathetic ugly perhaps but interesting same makes film experience director make things camera seems into just out shot show even characters into camera film camera just another between fantasy bored bored don't too much but if just fun film good off enjoyed if isn't see film up without still engaging visual film good bad like once while film energetic characters film not too long mus",
+      "positive_terms": [
+        [
+          "enjoyed",
+          0.1803310034246676
+        ],
+        [
+          "delightful",
+          0.16861661871731334
+        ],
+        [
+          "fun",
+          0.1629926826376706
+        ],
+        [
+          "shot",
+          0.15995678211255027
+        ],
+        [
+          "best",
+          0.13126453693188322
+        ]
+      ],
+      "negative_terms": [
+        [
+          "bad",
+          -0.2706974445886601
+        ],
+        [
+          "minute",
+          -0.21812976487420885
+        ],
+        [
+          "pathetic",
+          -0.18735583419367294
+        ],
+        [
+          "bored",
+          -0.157864770502323
+        ],
+        [
+          "director",
+          -0.12390522648177578
+        ]
+      ]
+    },
+    {
+      "id": "review-1917",
+      "row": 1917,
+      "true": 1,
+      "predicted": 0,
+      "snippet": "plot fool isn't long before into long story thing too up other friend girl but still young up good time movies film most doesn't really if like before but still characters funny up director out solid films other if haven't down much like film excellent premise up even characters shows lead really movie never much thought more ever but looks films so characters good but isn't movie long think but man really film another if loved most roles even more off most excited quite time so awesome into man",
+      "positive_terms": [
+        [
+          "great",
+          0.2787361989798226
+        ],
+        [
+          "excellent",
+          0.26559886843374514
+        ],
+        [
+          "most",
+          0.18249914596404385
+        ],
+        [
+          "well",
+          0.18137942216475894
+        ],
+        [
+          "solid",
+          0.16743945586734865
+        ]
+      ],
+      "negative_terms": [
+        [
+          "bad",
+          -0.2453104338131081
+        ],
+        [
+          "minute",
+          -0.19767274615449046
+        ],
+        [
+          "looks",
+          -0.1786063021650256
+        ],
+        [
+          "isn't",
+          -0.1590116732788835
+        ],
+        [
+          "maybe",
+          -0.15891608577737104
+        ]
+      ]
+    },
+    {
+      "id": "review-1844",
+      "row": 1844,
+      "true": 1,
+      "predicted": 0,
+      "snippet": "comedy doesn't but rather think film many however almost ugly film script best cinema once like still long instead once another if not making start film few before because out part man although doesn't made up about no down other hilarious sequence quality movies because shock funniest scenes makes into but watch down like really cannot after out much into experience young woman scenes but much feels like version scenes more films like having character style instead into style why almost whether",
+      "positive_terms": [
+        [
+          "hilarious",
+          0.45241352499397464
+        ],
+        [
+          "whether",
+          0.17153933357746004
+        ],
+        [
+          "makes",
+          0.134376534153628
+        ],
+        [
+          "best",
+          0.12797630222004464
+        ],
+        [
+          "cinema",
+          0.12191879263290349
+        ]
+      ],
+      "negative_terms": [
+        [
+          "bad",
+          -0.263916353865243
+        ],
+        [
+          "painful",
+          -0.19518340358695443
+        ],
+        [
+          "script",
+          -0.177168064483402
+        ],
+        [
+          "incompetent",
+          -0.14389479349823842
+        ],
+        [
+          "doesn't",
+          -0.14246684449869543
+        ]
+      ]
+    },
+    {
+      "id": "review-0476",
+      "row": 476,
+      "true": 0,
+      "predicted": 1,
+      "snippet": "seem great movie yet into better look but despite setting soundtrack better title makes not cast enough young movies love actress off even more role acting best things about good perhaps other actors dreary maybe good series characters make through up best among best friend love over but charming bad more many more but other story out time wasted man yet film down good bad performances love almost shot down too many until out many other if",
+      "positive_terms": [
+        [
+          "best",
+          0.33596759039187657
+        ],
+        [
+          "many",
+          0.31074922741889865
+        ],
+        [
+          "yet",
+          0.27500407335034255
+        ],
+        [
+          "great",
+          0.22155653239318052
+        ],
+        [
+          "soundtrack",
+          0.20737349513036402
+        ]
+      ],
+      "negative_terms": [
+        [
+          "bad",
+          -0.5589804640747333
+        ],
+        [
+          "wasted",
+          -0.3476002165280961
+        ],
+        [
+          "better",
+          -0.2531951889447127
+        ],
+        [
+          "maybe",
+          -0.21387191454058843
+        ],
+        [
+          "dreary",
+          -0.11355542967227888
+        ]
+      ]
+    },
+    {
+      "id": "review-1574",
+      "row": 1574,
+      "true": 1,
+      "predicted": 0,
+      "snippet": "offensive crude humor time minutes male hilarious comedy but crude humor love story isn't but very very funny comedy until end funny too entertaining comedy acting up performances quite funny screenplay smart story never thought male watch over while like down off thing make looks again so people woman woman time woman woman can't about but male crude humor male like about offensive but very funny screenplay smart clever screenplay seems make so funny characters film but movie out so even though",
+      "positive_terms": [
+        [
+          "hilarious",
+          0.3354149636150577
+        ],
+        [
+          "entertaining",
+          0.21838626615696485
+        ],
+        [
+          "performance",
+          0.18353608699071064
+        ],
+        [
+          "very",
+          0.16473861274488555
+        ],
+        [
+          "fantastic",
+          0.16114291373024997
+        ]
+      ],
+      "negative_terms": [
+        [
+          "bad",
+          -0.1956650041138981
+        ],
+        [
+          "offensive",
+          -0.1847187848877087
+        ],
+        [
+          "comedy",
+          -0.15357272662486657
+        ],
+        [
+          "looks",
+          -0.14246031978612264
+        ],
+        [
+          "screenplay",
+          -0.138218852838477
+        ]
+      ]
+    },
+    {
+      "id": "review-1459",
+      "row": 1459,
+      "true": 1,
+      "predicted": 0,
+      "snippet": "movies but again horror films really long after movie horror films much visual effects so much so rather really no movie long time if over film person stupid enough so up having before like no other horror film visual music plot audience within suspense film very well done indeed film not horror looking into just powerful film can't friend watching but very plot leading audience",
+      "positive_terms": [
+        [
+          "very",
+          0.23821630481729092
+        ],
+        [
+          "well",
+          0.15314542136514186
+        ],
+        [
+          "visual",
+          0.10862486370460966
+        ],
+        [
+          "indeed",
+          0.10546513448495194
+        ],
+        [
+          "powerful",
+          0.08870422751577811
+        ]
+      ],
+      "negative_terms": [
+        [
+          "plot",
+          -0.3024700101245245
+        ],
+        [
+          "stupid",
+          -0.26458906521875714
+        ],
+        [
+          "no",
+          -0.18982503066426665
+        ],
+        [
+          "long",
+          -0.1284365639247562
+        ],
+        [
+          "watching",
+          -0.12799600772512645
+        ]
+      ]
+    },
+    {
+      "id": "review-0562",
+      "row": 562,
+      "true": 0,
+      "predicted": 1,
+      "snippet": "people successful many good films thing few so why so many films end up bad see perhaps too part but not enough film out no time however too films just very why but else time fresh so less against terror off why else while watch friends if more don't off no most interesting characters seem until end most part seem acting most boring characters although if if so after hero best but while very out film however under but same humor just part character but almost makes although done well no think gr",
+      "positive_terms": [
+        [
+          "very",
+          0.22907770830711627
+        ],
+        [
+          "many",
+          0.20661945955893818
+        ],
+        [
+          "most",
+          0.20241626064300833
+        ],
+        [
+          "although",
+          0.18373038003016068
+        ],
+        [
+          "great",
+          0.18259262106973217
+        ]
+      ],
+      "negative_terms": [
+        [
+          "why",
+          -0.33942132487853016
+        ],
+        [
+          "boring",
+          -0.3358919628454471
+        ],
+        [
+          "bad",
+          -0.27208248261581774
+        ],
+        [
+          "no",
+          -0.20756619697088446
+        ],
+        [
+          "else",
+          -0.18754218962755803
+        ]
+      ]
+    }
+  ]
+}
