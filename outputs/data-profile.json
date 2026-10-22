@@ -4,8 +4,8 @@
   "positive": 1000,
   "negative": 1000,
   "dropped_zero_approved_words": 0,
-  "approved_vocabulary_size": 653,
-  "retained_word_fraction": 0.57641701071637,
-  "data_sha256": "a0af6578a066b935490bda79fa054b9855f32af1f44ca254d633f0ccdb2fe852",
+  "approved_vocabulary_size": 658,
+  "retained_word_fraction": 0.5769479077618698,
+  "data_sha256": "a3c5e8cf98ef4940f1b2c6b7d216b38061bd785b8ee1077735254ed24c296cde",
   "privacy_transform": "only reviewed generic words; other alphabetic words replaced by UNK, digits/contact syntax excluded"
 }

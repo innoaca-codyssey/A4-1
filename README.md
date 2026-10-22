@@ -18,14 +18,14 @@ Bo Pang/Lillian Lee의 Sentiment Polarity Dataset2.0을 NLTK의 고정 revision�
   "positive": 1000,
   "negative": 1000,
   "dropped_zero_approved_words": 0,
-  "approved_vocabulary_size": 653,
-  "retained_word_fraction": 0.57641701071637,
-  "data_sha256": "a0af6578a066b935490bda79fa054b9855f32af1f44ca254d633f0ccdb2fe852",
+  "approved_vocabulary_size": 658,
+  "retained_word_fraction": 0.5769479077618698,
+  "data_sha256": "a3c5e8cf98ef4940f1b2c6b7d216b38061bd785b8ee1077735254ed24c296cde",
   "privacy_transform": "only reviewed generic words; other alphabetic words replaced by UNK, digits/contact syntax excluded"
 }
 ```
 
-긍정/부정 각각1,000개인 실제 리뷰2,000개입니다. 검토한 일반 어휘653개만 입력 표현에 남기고 그 밖의 이름 등 단어는 UNK로 대체했습니다. 숫자/연락처 형식은 제외했고 원본은 Git에 포함하지 않았습니다. 남은 어휘 비율은57.64%입니다. 알려지지 않은 단어의 위치/문장 경계를 유지해 부정어 거리도 보존했습니다. 이 제한으로 고유명사/전문 용어와 일부 의미도 함께 손실됩니다.
+긍정/부정 각각1,000개인 실제 리뷰2,000개입니다. 검토한 일반 어휘658개만 입력 표현에 남기고 그 밖의 이름 등 단어는 UNK로 대체했습니다. 숫자/연락처 형식은 제외했고 원본은 Git에 포함하지 않았습니다. 남은 어휘 비율은57.69%입니다. 알려지지 않은 단어의 위치/문장 경계를 유지해 부정어 거리도 보존했습니다. 이 제한으로 고유명사/전문 용어와 일부 의미도 함께 손실됩니다.
 
 소문자화 후 단어 내부의 apostrophe/hyphen을 허용하고 벡터화에서 그 밖의 구두점/UNK를 제외합니다. 관사/대명사/일반 조동사는 불용어로, not/no/never와강조어는 유지합니다. movies→movie처럼 정한 명사 복수형만 통일하며 good/excellent의 강도 차이를 보존하려고 자동 동의어 통합은 하지 않습니다.
 
@@ -73,3 +73,5 @@ OK
 | log | False | l2 | 1.665e-16 |
 
 모든 설정이1e-6 기준 안에 들어왔습니다. 검증에서 만든 어휘/IDF는 분류 실험에 재사용하지 않습니다.
+
+부정 축약형 can't/ain't/needn't/mustn't/shan't도 정제에서 보존했습니다. 수정 후2,000문서의8설정을 다시 검산했고최대 오차4.44e-16, 독립8검사가 통과했습니다.

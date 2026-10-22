@@ -64,6 +64,7 @@ class BowTests(unittest.TestCase):
         self.assertNotIn("@", text)
         self.assertNotIn("010", text)
         self.assertIn("not", tokenize(text))
+        self.assertIn("can't", tokenize(sanitize("I can't enjoy this movie.")))
         self.assertIn("good", tokenize(text))
 
     def test_test_word_does_not_change_training_idf(self):

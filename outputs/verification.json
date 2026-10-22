@@ -5,7 +5,7 @@
     "norm": null,
     "shape": [
       2000,
-      546
+      549
     ],
     "max_absolute_error": 0.0
   },
@@ -15,7 +15,7 @@
     "norm": "l2",
     "shape": [
       2000,
-      546
+      549
     ],
     "max_absolute_error": 4.440892098500626e-16
   },
@@ -25,7 +25,7 @@
     "norm": null,
     "shape": [
       2000,
-      546
+      549
     ],
     "max_absolute_error": 0.0
   },
@@ -35,7 +35,7 @@
     "norm": "l2",
     "shape": [
       2000,
-      546
+      549
     ],
     "max_absolute_error": 3.3306690738754696e-16
   },
@@ -45,7 +45,7 @@
     "norm": null,
     "shape": [
       2000,
-      546
+      549
     ],
     "max_absolute_error": 0.0
   },
@@ -55,9 +55,9 @@
     "norm": "l2",
     "shape": [
       2000,
-      546
+      549
     ],
-    "max_absolute_error": 2.220446049250313e-16
+    "max_absolute_error": 1.6653345369377348e-16
   },
   {
     "tf": "log",
@@ -65,7 +65,7 @@
     "norm": null,
     "shape": [
       2000,
-      546
+      549
     ],
     "max_absolute_error": 0.0
   },
@@ -75,7 +75,7 @@
     "norm": "l2",
     "shape": [
       2000,
-      546
+      549
     ],
     "max_absolute_error": 1.6653345369377348e-16
   }
