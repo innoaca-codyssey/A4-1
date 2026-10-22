@@ -1,0 +1,82 @@
+[
+  {
+    "tf": "raw",
+    "smooth_idf": true,
+    "norm": null,
+    "shape": [
+      2000,
+      546
+    ],
+    "max_absolute_error": 0.0
+  },
+  {
+    "tf": "raw",
+    "smooth_idf": true,
+    "norm": "l2",
+    "shape": [
+      2000,
+      546
+    ],
+    "max_absolute_error": 4.440892098500626e-16
+  },
+  {
+    "tf": "raw",
+    "smooth_idf": false,
+    "norm": null,
+    "shape": [
+      2000,
+      546
+    ],
+    "max_absolute_error": 0.0
+  },
+  {
+    "tf": "raw",
+    "smooth_idf": false,
+    "norm": "l2",
+    "shape": [
+      2000,
+      546
+    ],
+    "max_absolute_error": 3.3306690738754696e-16
+  },
+  {
+    "tf": "log",
+    "smooth_idf": true,
+    "norm": null,
+    "shape": [
+      2000,
+      546
+    ],
+    "max_absolute_error": 0.0
+  },
+  {
+    "tf": "log",
+    "smooth_idf": true,
+    "norm": "l2",
+    "shape": [
+      2000,
+      546
+    ],
+    "max_absolute_error": 2.220446049250313e-16
+  },
+  {
+    "tf": "log",
+    "smooth_idf": false,
+    "norm": null,
+    "shape": [
+      2000,
+      546
+    ],
+    "max_absolute_error": 0.0
+  },
+  {
+    "tf": "log",
+    "smooth_idf": false,
+    "norm": "l2",
+    "shape": [
+      2000,
+      546
+    ],
+    "max_absolute_error": 1.6653345369377348e-16
+  }
+]

@@ -38,3 +38,38 @@ Bo Pang/Lillian Lee의 Sentiment Polarity Dataset2.0을 NLTK의 고정 revision�
 ## 한계와 개선
 
 단어 선택/문맥/어순의 영향과 실제 오분류를 검토합니다.
+
+### NumPy 수식과 검산
+
+빈도는 문서별np.bincount, DF는비제로 문서 수로 계산합니다. 기본Log TF=1+ln(count), IDF=ln((N+1)/(DF+1))+1, 가중치TF*IDF를 행의L2길이로 나눕니다. 영벡터는0으로 유지하고 새 문서는 Train의 어휘/IDF로만 변환합니다. 검색에서는 두 L2벡터의 내적을 코사인으로 계산합니다.
+
+```text
+test_bm25_known_formula (test_bow.BowTests.test_bm25_known_formula) ... ok
+test_bm25_zero_document_at_b_one (test_bow.BowTests.test_bm25_zero_document_at_b_one) ... ok
+test_cosine_geometry (test_bow.BowTests.test_cosine_geometry) ... ok
+test_double_tf_and_zero_query (test_bow.BowTests.test_double_tf_and_zero_query) ... ok
+test_inverted_exact_scores (test_bow.BowTests.test_inverted_exact_scores) ... ok
+test_no_identifying_string_and_negation_retained (test_bow.BowTests.test_no_identifying_string_and_negation_retained) ... ok
+test_test_word_does_not_change_training_idf (test_bow.BowTests.test_test_word_does_not_change_training_idf) ... ok
+test_tfidf_known_formula (test_bow.BowTests.test_tfidf_known_formula) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.030s
+
+OK
+```
+
+독립 손계산과 영벡터/미지어/역색인/테스트어휘누수를 검사했습니다. Scikit-learn의 TfidfVectorizer에는 같은 tokenizer/vocabulary와lowercase=False/token_pattern=None을 지정했습니다. raw/log TF, smooth_idf=True/False, norm=None/l2의8설정을 같은2,000문서에서 비교했습니다.
+
+| TF | smooth IDF | norm | 최대 절대 오차 |
+|---|---|---|---:|
+| raw | True | None | 0.000e+00 |
+| raw | True | l2 | 4.441e-16 |
+| raw | False | None | 0.000e+00 |
+| raw | False | l2 | 3.331e-16 |
+| log | True | None | 0.000e+00 |
+| log | True | l2 | 2.220e-16 |
+| log | False | None | 0.000e+00 |
+| log | False | l2 | 1.665e-16 |
+
+모든 설정이1e-6 기준 안에 들어왔습니다. 검증에서 만든 어휘/IDF는 분류 실험에 재사용하지 않습니다.
